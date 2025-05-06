@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Vision</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: url('best-background-for-website-11.jpg') no-repeat center center/cover;
+      color: rgb(0, 255, 128);
+      position: relative;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background: linear-gradient(45deg, #00ff80, #005500);
+      border-bottom: 3px solid #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .header-logo:hover {
+      transform: rotate(360deg);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      background-color: rgb(0, 255, 128);
+      padding: 10px 16px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.4s ease-in-out;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      background-color: #000;
+      color: rgb(0, 255, 128);
+      transform: scale(1.05);
+    }
+
+    .content {
+      margin-top: 130px;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: rgb(0, 255, 128);
+    }
+
+    hr {
+      width: 50%;
+      margin: 10px auto;
+      height: 3px;
+      background: rgb(0, 255, 128);
+      border: none;
+    }
+
+    .vision-text {
+      font-size: 1rem;
+      font-weight: 400;
+      color: #fff;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border: 2px dashed rgb(0, 255, 128);
+    }
+
+    .vision-text pre {
+      white-space: pre-wrap;
+      text-align: left;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin: 30px 0;
+    }
+
+    .image-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 20px;
+      border: 3px solid rgb(0, 255, 128);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: linear-gradient(45deg, #005500, #00ff80);
+      color: #000;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+
+      .header-logo {
+        width: 60px;
+        height: 60px;
+      }
+
+      .content {
+        padding: 10px;
+      }
+
+      h1 {
+        font-size: 1.8rem;
+      }
+
+      .vision-text {
+        font-size: 0.95rem;
+        padding: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links a {
+        font-size: 13px;
+        padding: 8px 12px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      .vision-text {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img class="header-logo" src="IMG_20250108_053216_091.jpg" alt="Logo">
+    <nav class="nav-links">
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/index1.html">Home</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/index22.html">About Us</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/mission.html">Mission</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/vision.html">Vision</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/contact.html#">Contact Us</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/library.html#library">Library</a>
+    </nav>
+  </header>
+
+  <div class="content">
+    <h1>VISION</h1>
+    <hr>
+    <div class="vision-text">
+      <pre>
+Vision Statement for the Information Communication Technology (ICT) Club
+
+Vision:
+To be a dynamic hub for innovation and collaboration, empowering members to explore, learn, and 
+excel in the ever-evolving field of Information Communication Technology. 
+
+Key Objectives:
+1. Knowledge Sharing: Provide a platform for sharing insights and experiences in ICT.
+2. Skill Development: Conduct workshops, seminars, and training to boost technical skills.
+3. Collaboration: Partner with businesses, educational institutions, and tech organizations.
+4. Innovation: Host hackathons, projects, and competitions for creative problem-solving.
+5. Community Engagement: Promote responsible tech use through outreach programs.
+6. Diversity & Inclusion: Foster an inclusive environment for all backgrounds.
+      </pre>
+    </div>
+
+    <div class="image-container">
+      <img src="glossary_1122x777_What-is-ICT.png" alt="ICT Vision">
+    </div>
+
+    <div class="vision-text">
+      <pre>
+Goals for the Website:
+1. Resource Hub: Access educational materials and tutorials on ICT topics.
+2. Event Calendar: Keep track of workshops, meetings, and tech-related events.
+3. Discussion Forum: Engage in ICT discussions and knowledge-sharing.
+4. Project Showcase: Display club projects and achievements.
+5. Membership Portal: Facilitate easy registration and member communication.
+6. News & Updates: Stay informed about trends, activities, and industry news.
+      </pre>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Vision Statement | All Rights Reserved
+  </footer>
+
+</body>
+</html>

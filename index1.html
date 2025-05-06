@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ICT Club</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #001f3f, #0074D9);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+      background-color: rgba(0, 0, 0, 0.4);
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .header-logo {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+
+    .nav-links a {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 18px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #2ecc71;
+    }
+
+    .main {
+      padding: 100px 40px 40px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    hr {
+      width: 80%;
+      margin: 20px auto;
+      border: 1px solid #2ecc71;
+    }
+
+    .description {
+      font-size: 18px;
+      padding: 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .matton {
+      display: inline-block;
+      padding: 14px 40px;
+      margin-top: 30px;
+      font-size: 18px;
+      background-color: #2ecc71;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .matton:hover {
+      background-color: #27ae60;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      background: rgba(0, 0, 0, 0.3);
+      margin-top: 40px;
+    }
+
+    /* Tablet View (max width 992px) */
+    @media (max-width: 992px) {
+      header {
+        flex-direction: column;
+        padding: 10px 20px;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .main {
+        padding: 120px 20px 40px;
+      }
+
+      .description {
+        font-size: 16px;
+      }
+
+      .matton {
+        font-size: 16px;
+        padding: 12px 30px;
+      }
+
+      h1 {
+        font-size: 28px;
+      }
+
+      h2 {
+        font-size: 24px;
+      }
+    }
+
+    /* Phone View (max width 600px) */
+    @media (max-width: 600px) {
+      .header-logo {
+        width: 70px;
+        height: 70px;
+      }
+
+      .main {
+        padding: 140px 15px 40px;
+      }
+
+      .description {
+        font-size: 14px;
+        padding: 15px;
+      }
+
+      .matton {
+        font-size: 14px;
+        padding: 10px 25px;
+      }
+
+      h1 {
+        font-size: 22px;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+
+      hr {
+        width: 70%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="ICTLOGO.jpg" alt="ICT Club Logo" class="header-logo" />
+    <nav class="nav-links">
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/index1.html">Home</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/index22.html">About</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/mission.html">Mission</a>
+       <a href="https://tesfaking.github.io/oda-ICT-club-website/vision.html">Vision</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/mission.html">Contact</a>
+       <a href="https://tesfaking.github.io/oda-ICT-club-website/library.html#library">Library</a>
+    </nav>
+  </header>
+
+  <section class="main">
+    <h1>Welcome to the ICT Club</h1>
+    <h2>Innovation, Creativity, Technology</h2>
+    <hr />
+    <p class="description">
+      Join our vibrant community where we explore programming, robotics, design, and all things tech! 
+      Our mission is to inspire students to innovate and solve real-world problems through technology.
+    </p>
+    <a href="https://tesfaking.github.io/oda-ICT-club-website/contact.html" class="matton">Join Now</a>
+  </section>
+
+  <footer>
+    &copy; 2025 ICT Club. All rights reserved.
+  </footer>
+
+  <script>
+    // JavaScript could go here (e.g. mobile menu toggle or interactive behavior)
+    console.log("ICT Club site loaded.");
+  </script>
+</body>
+</html>

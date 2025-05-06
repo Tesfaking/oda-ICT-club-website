@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us - ICT Club</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(to right, #003300, #00cc66);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      padding: 140px 20px 40px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background: linear-gradient(45deg, #00ff80, #005500);
+      border-bottom: 3px solid #fff;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .header-logo {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .header-logo:hover {
+      transform: rotate(360deg);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      background-color: rgb(0, 255, 128);
+      padding: 10px 15px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.4s ease-in-out;
+      font-size: 14px;
+    }
+
+    .nav-links a:hover {
+      background-color: #000;
+      color: rgb(0, 255, 128);
+      transform: scale(1.1);
+    }
+
+    h1 {
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #00ff99;
+      animation: fadeInDown 1s ease;
+    }
+
+    form {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 25px;
+      border-radius: 15px;
+      max-width: 500px;
+      width: 100%;
+      box-shadow: 0 0 20px rgba(0, 255, 128, 0.3);
+      animation: fadeInUp 1.5s ease;
+      margin-top: 30px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+    }
+
+    input:focus, textarea:focus {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 0 8px #00ff99;
+    }
+
+    button {
+      margin-top: 10px;
+      background-color: #00ff99;
+      color: black;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    button:hover {
+      background-color: black;
+      color: #00ff99;
+      transform: scale(1.05);
+    }
+
+    .info {
+      margin-top: 30px;
+      font-size: 16px;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .nav-links {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 10px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      .header-logo {
+        width: 60px;
+        height: 60px;
+      }
+
+      form {
+        padding: 20px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 22px;
+      }
+
+      .nav-links a {
+        font-size: 12px;
+        padding: 8px 12px;
+      }
+
+      button {
+        font-size: 14px;
+        padding: 8px 16px;
+      }
+
+      .info {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="header-logo" src="IMG_20250108_053216_091.jpg" alt="Logo">
+    <nav class="nav-links">
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/index1.html">Home</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/index22.html">About Us</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/mission.html">Mission</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/vision.html">Vision</a>
+      <a href="#">Contact Us</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/library.html#library">Library</a>
+    </nav>
+  </header>
+
+  <h1>📞 Contact Us</h1>
+
+  <form action="https://formspree.io/f/mnndpqvo" method="POST" id="contactForm">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="text" name="subject" placeholder="Subject" />
+    <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <div class="info">
+    <p>📍 Oromia Development Association Special Boarding School, Bishoftu</p>
+    <p>📧 odaasbs2017@gmail.com</p>
+    <p>📱 +251956570171</p>
+  </div>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: {
+          Accept: "application/json"
+        }
+      }).then(response => {
+        if (response.ok) {
+          alert("🎉 Message sent successfully!");
+          form.reset();
+        } else {
+          alert("❌ Failed to send message. Please try again.");
+        }
+      }).catch(error => {
+        alert("🚫 Error occurred. Check your internet or try later.");
+      });
+    });
+  </script>
+</body>
+</html>

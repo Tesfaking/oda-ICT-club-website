@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ICT Club & Library</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: linear-gradient(to right, #003300, #00cc66);
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(45deg, #00ff80, #005500);
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 3px solid #fff;
+      flex-wrap: wrap;
+    }
+
+    .header-logo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      transition: transform 0.6s;
+    }
+
+    .header-logo:hover {
+      transform: rotate(360deg);
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      background-color: #00ff80;
+      margin: 5px 10px;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-weight: bold;
+      transition: all 0.3s;
+    }
+
+    .nav-links a:hover {
+      background: black;
+      color: #00ff80;
+      transform: scale(1.1);
+    }
+
+    .main {
+      padding: 60px 20px 40px;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    h1, h2 {
+      color: #00ff99;
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+    }
+
+    hr {
+      width: 60%;
+      margin: 15px auto;
+      height: 3px;
+      background: #00ff99;
+      border: none;
+      animation: slideIn 1s ease-in-out;
+    }
+
+    .description {
+      background: rgba(0, 0, 0, 0.7);
+      padding: 20px;
+      margin: 30px auto;
+      max-width: 800px;
+      border-radius: 15px;
+      border: 2px dashed #00ff99;
+      font-size: 1rem;
+    }
+
+    .buttons {
+      margin: 20px;
+    }
+
+    .matton {
+      display: inline-block;
+      text-decoration: none;
+      background-color: #ff0066;
+      color: #00ff99;
+      padding: 12px 30px;
+      margin: 10px;
+      border-radius: 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .matton:hover {
+      background: #00ff99;
+      color: black;
+      transform: scale(1.1);
+    }
+
+    .library {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 40px 20px;
+      margin: 30px auto;
+      border-radius: 15px;
+      max-width: 1000px;
+      animation: fadeInUp 1.5s ease-in-out;
+    }
+
+    .library h2 {
+      font-size: 1.5rem;
+      border-bottom: 2px solid #00ff99;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+    }
+
+    .item1 {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 15px auto;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #00ff99;
+      transition: transform 0.3s;
+      width: 90%;
+    }
+
+    .item1:hover {
+      transform: scale(1.02);
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    video {
+      width: 100%;
+      border-radius: 10px;
+      outline: 2px solid #00ff99;
+    }
+
+    .item {
+      background: rgba(255, 255, 255, 0.05);
+      margin: 15px auto;
+      padding: 15px;
+      border-radius: 10px;
+      border: 1px solid #00ff99;
+      width: 90%;
+      max-width: 800px;
+    }
+
+    .book-link {
+      color: #00ff99;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .book-link:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 20px;
+      background: #004d00;
+      color: white;
+      font-weight: bold;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideIn {
+      from {
+        width: 0%;
+      }
+      to {
+        width: 60%;
+      }
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+      h2 {
+        font-size: 2rem;
+      }
+      .matton {
+        font-size: 1.1rem;
+      }
+      .item1, .item {
+        width: 80%;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .item1, .item {
+        width: 70%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="header-logo" src="IMG_20250108_053216_091.jpg" alt="Logo" />
+    <div class="nav-links">
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/index1.html">Home</a>
+      <a href="#library">Library</a>
+      <a href="https://tesfaking.github.io/oda-ICT-club-website/contact.html#">Contact</a>
+    </div>
+  </header>
+
+  <section class="main" id="home">
+    <h2>WELCOME TO ICT CLUB!!!</h2>
+    <hr />
+    <h1>OROMIA DEVELOPMENT ASSOCIATION SPECIAL BOARDING SCHOOL</h1>
+    <div class="description">
+      <p>
+        ICT Club is a learning platform established to aid students and the
+        school society. We are eager to help pupils gain knowledge in Computer
+        Science and programming. Our mission is to create strong technological
+        networks within the school community. The club aims to empower Oromia
+        Development Association Special Boarding School Bishoftu Branch through
+        unwavering assistance and interactive learning platforms.
+      </p>
+    </div>
+    <div class="buttons">
+      <a class="matton" href="#library">Library</a>
+    </div>
+  </section>
+
+  <section class="library" id="library">
+    <h2>📚 Video Library</h2>
+
+    <div class="item1">
+      <p>🎥 Introduction to Programming</p>
+      <video controls>
+        <source src="Introduction to Computer Programming _ What is it_ Programming Language Types.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="item1">
+      <p>🎥 What is HTML</p>
+      <video controls>
+        <source src="What is HTML_.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="item1">
+      <p>🎥 What is CSS</p>
+      <video controls>
+        <source src="What is CSS_ And How It Works!.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <div class="item1">
+      <p>🎥 What is JavaScript</p>
+      <video controls>
+        <source src="What is JavaScript_.mp4" type="video/mp4">
+      </video>
+    </div>
+
+    <h2 style="margin-top:40px;">📘 Book Library</h2>
+
+    <div class="item">
+      <p><a class="book-link" href="FullStackWebDev_CourseReader_FirstChapter.pdf" download>📄 Introduction to Full Stack Web Development</a></p>
+    </div>
+    <div class="item">
+      <p><a class="book-link" href="book1.pdf" download>📄 100 Java Programs</a></p>
+    </div>
+    <div class="item">
+      <p><a class="book-link" href="CSS_Notes.pdf" download>📄 CSS Notes</a></p>
+    </div>
+    <div class="item">
+      <p><a class="book-link" href="HTML_Note.pdf" download>📄 HTML Note</a></p>
+    </div>
+    <div class="item">
+      <p><a class="book-link" href="java_script notes 📝 .pdf" download>📄 JavaScript Notes</a></p>
+    </div>
+  </section>
+
+  <footer id="contact">
+    &copy; 2025 ICT Club | All Rights Reserved
+  </footer>
+</body>
+</html>

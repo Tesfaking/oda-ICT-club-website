@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About ICT Club</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: url('3a4c357c0c1e580cd9f70a9b3e391e1f.jpg') no-repeat center center/cover;
+            color: #f1eaea;
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: -1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            background: linear-gradient(45deg, #006400, #228B22);
+            border-bottom: 3px solid #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .header-logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .header-logo:hover {
+            transform: rotate(360deg);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            background-color: #32CD32;
+            padding: 12px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .nav-links a:hover {
+            background-color: #000;
+            color: #32CD32;
+            transform: scale(1.1);
+        }
+
+        .content {
+            margin-top: 140px;
+            text-align: center;
+            padding: 20px;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #32CD32;
+        }
+
+        h2, h3 {
+            font-size: 30px;
+            font-weight: bold;
+            color: #fff;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        hr {
+            width: 50%;
+            margin: 10px auto;
+            height: 3px;
+            background: #32CD32;
+            border: none;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .description {
+            font-size: 20px;
+            font-weight: 400;
+            color: #fff;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px dashed #32CD32;
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+
+        .description pre {
+            white-space: pre-wrap;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .matton {
+            text-decoration: none;
+            display: inline-block;
+            background-color: #006400;
+            color: #32CD32;
+            padding: 15px 40px;
+            margin: 10px;
+            border-radius: 30px;
+            font-size: 20px;
+            font-weight: bold;
+            transition: all 0.4s ease-in-out;
+            border: 2px solid transparent;
+        }
+
+        .matton:hover {
+            background: #32CD32;
+            color: #000;
+            transform: scale(1.1);
+            border-color: #000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #228B22, #32CD32);
+            color: #000;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from { width: 0%; }
+            to { width: 50%; }
+        }
+
+        /* Responsive Design */
+
+        /* Phones */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                padding: 10px;
+            }
+
+            .header-logo {
+                width: 80px;
+                height: 80px;
+                margin-bottom: 10px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .nav-links a {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            h2, h3 {
+                font-size: 22px;
+            }
+
+            .description {
+                font-size: 16px;
+                padding: 15px;
+                margin: 15px;
+            }
+
+            .matton {
+                padding: 12px 30px;
+                font-size: 16px;
+            }
+        }
+
+        /* Tablets */
+        @media (min-width: 601px) and (max-width: 992px) {
+            header {
+                padding: 15px 30px;
+            }
+
+            .nav-links a {
+                padding: 10px 18px;
+                font-size: 16px;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+            h2, h3 {
+                font-size: 26px;
+            }
+
+            .description {
+                font-size: 18px;
+                padding: 20px;
+                margin: 20px;
+            }
+
+            .matton {
+                padding: 14px 35px;
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img class="header-logo" src="IMG_20250108_053216_091.jpg" alt="Logo">
+        <nav class="nav-links">
+            <a href="https://tesfaaking.github.io/oda-ICT-club-website/index1.html">Home</a>
+            <a href="https://tesfaaking.github.io/oda-ICT-club-website/index22.html">About Us</a>
+            <a href="https://tesfaaking.github.io/oda-ICT-club-website/mission.html">Mission</a>
+            <a href="https://tesfaaking.github.io/oda-ICT-club-website/vision.html">Vision</a>
+            <a href="https://tesfaaking.github.io/oda-ICT-club-website/contact.html#">Contact Us</a>
+            <a href="https://tesfaaking.github.io/oda-ICT-club-website/library.html#library">Library</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h3>DEAR STUDENTS, WELCOME TO ICT CLUB!!!</h3>
+        <hr>
+        <h2>OROMIA DEVELOPMENT ASSOCIATION SPECIAL BOARDING SCHOOL BISHOFTU BRANCH</h2>
+        <hr>
+        <h1>WHO ARE WE?</h1>
+
+        <div class="description">
+            <pre>
+We are Special Boarding School students eager to help and empower others in technology. 
+Our mission is to create technological solutions, enhance coding knowledge, and foster 
+education in ICT.
+
+Through workshops, hackathons, and hands-on projects, we provide a dynamic learning 
+environment that equips students with digital skills. Whether you're a beginner or an 
+experienced coder, ICT Club is the perfect place to grow.
+
+Join us in making a difference in the digital world!
+            </pre>
+        </div>
+
+        <h1>WE MAKE CHANGES!!!</h1>
+    </div>
+
+    <footer>
+        &copy; 2025 ICT Club | All Rights Reserved
+    </footer>
+
+</body>
+</html>

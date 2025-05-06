@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mission</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: url('best-background-for-website-11.jpg') no-repeat center center/cover;
+            color: rgb(0, 255, 128);
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: -1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #00ff80, #005500);
+            border-bottom: 3px solid #fff;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .header-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .header-logo:hover {
+            transform: rotate(360deg);
+        }
+
+        .nav-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #000;
+            background-color: rgb(0, 255, 128);
+            padding: 10px 16px;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: all 0.4s ease-in-out;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            background-color: #000;
+            color: rgb(0, 255, 128);
+            transform: scale(1.05);
+        }
+
+        .content {
+            margin-top: 140px;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        hr {
+            width: 60%;
+            margin: 10px auto;
+            height: 3px;
+            background: rgb(0, 255, 128);
+            border: none;
+            animation: slideIn 1s ease-in-out;
+        }
+
+        .mission-text {
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.7;
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 15px;
+            background: rgba(0, 0, 0, 0.7);
+            border: 2px dashed rgb(0, 255, 128);
+            animation: fadeInUp 1.5s ease-in-out;
+            text-align: left;
+        }
+
+        .mission-text pre {
+            white-space: pre-wrap;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+
+        .image-container img {
+            width: 90%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 25px;
+            border: 3px solid rgb(0, 255, 128);
+            transition: transform 0.4s ease-in-out;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.03);
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: linear-gradient(45deg, #005500, #00ff80);
+            color: #000;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { width: 0%; }
+            to { width: 60%; }
+        }
+
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                padding: 15px;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            .nav-links a {
+                width: 80%;
+                text-align: center;
+            }
+
+            .header-logo {
+                margin-bottom: 10px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .mission-text {
+                font-size: 15px;
+                padding: 15px;
+            }
+
+            .image-container img {
+                width: 95%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links a {
+                font-size: 12px;
+                padding: 8px 12px;
+            }
+
+            h1 {
+                font-size: 22px;
+            }
+
+            .mission-text {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img class="header-logo" src="IMG_20250108_053216_091.jpg" alt="Logo">
+    <nav class="nav-links">
+        <a href="https://tesfaking.github.io/oda-ICT-club-website/index1.html">Home</a>
+        <a href="https://tesfaking.github.io/oda-ICT-club-website/index22.html">About Us</a>
+        <a href="https://tesfaking.github.io/oda-ICT-club-website/mission.html">Mission</a>
+        <a href="https://tesfaking.github.io/oda-ICT-club-website/vision.html">Vision</a>
+        <a href="https://tesfaking.github.io/oda-ICT-club-website/contact.html#">Contact Us</a>
+        <a href="https://tesfaking.github.io/oda-ICT-club-website/library.html#library">Library</a>
+    </nav>
+</header>
+
+<div class="content">
+    <h1>MISSION</h1>
+    <hr>
+    <div class="mission-text">
+        <pre>
+✓ Enhance students' knowledge with technological skills and make them competitive in the world of technology.
+✓ Produce students who identify the benefits and harms of technology, avoid the harms and share the necessary benefits.
+✓ Integrate the culture, morals, and traditions of the Oromo people with modernized technology.
+✓ Introduce the traditions of the Oromo people through innovative technological methods.
+✓ Provide hands-on learning experiences, ethical awareness, and encourage entrepreneurship.
+        </pre>
+    </div>
+
+    <div class="image-container">
+        <img src="ICT-for-Students.jpg" alt="ICT for Students">
+    </div>
+
+    <div class="mission-text">
+        <pre>
+✓ Promote the Oromo language through digital platforms.
+✓ Collaborate with cultural leaders to ensure respect for traditions in technological advancements.
+✓ Equip students with entrepreneurial skills to create tech-based businesses.
+✓ Ensure students are globally competitive while preserving their unique identity.
+✓ Align with Sustainable Development Goals (SDGs) to promote quality education and equality.
+        </pre>
+    </div>
+</div>
+
+<footer>
+    &copy; 2025 Mission Statement | All Rights Reserved
+</footer>
+
+</body>
+</html>

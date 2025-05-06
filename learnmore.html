@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programming Quiz</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #a8e063, #56ab2f);
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
+
+    .quiz-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(12px);
+      width: 90%;
+      max-width: 700px;
+      text-align: center;
+      animation: popIn 0.6s ease;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      color: #e8f5e9;
+      font-size: 2rem;
+      text-shadow: 1px 1px 4px #000;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .mtf {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+    }
+
+    .mtf a button {
+      background-color: #00cc66;
+      color: white;
+      padding: 12px;
+      font-size: 18px;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 12px #00ff99;
+    }
+
+    .mtf a button:hover {
+      background-color: #00ff99;
+      color: black;
+      transform: scale(1.1);
+    }
+
+    .option {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+
+    .option:hover {
+      background: rgba(255, 255, 255, 0.3);
+      transform: scale(1.03);
+      border-color: #ffffff50;
+    }
+
+    .option.correct {
+      background-color: #81c784;
+      border-color: #66bb6a;
+    }
+
+    .option.wrong {
+      background-color: #e57373;
+      border-color: #ef5350;
+    }
+
+    #next {
+      margin-top: 20px;
+      padding: 12px 24px;
+      font-size: 1rem;
+      background-color: #aed581;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      display: none;
+      transition: 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    #next:hover {
+      background-color: #9ccc65;
+      transform: scale(1.05);
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.4s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(15px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* Media Queries for Responsive Design */
+    @media (max-width: 768px) {
+      .quiz-container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+
+      .option {
+        font-size: 1rem;
+      }
+
+      #next {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .quiz-container {
+        padding: 20px 15px;
+      }
+
+      h1 {
+        font-size: 1.3rem;
+      }
+
+      h2 {
+        font-size: 0.95rem;
+      }
+
+      .option {
+        font-size: 0.95rem;
+      }
+
+      #next {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="mtf">
+    <a href="https://tesfaking.github.io/oda-ICT-club-website/index1.html"><button>&loarr;</button></a>
+  </div>
+  <div class="quiz-container">
+    <h1>Programming Quiz</h1>
+    <div id="quiz" class="fade-in"></div>
+    <button id="next">Next</button>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    const questions = [
+      { question: "What is the output of print(type([])) in Python?", options: ["<class 'list'>", "<type 'list'>", "list", "ListType"], answer: 0 },
+      { question: "Which keyword is used to define a function in Python?", options: ["func", "define", "def", "function"], answer: 2 },
+      { question: "What does === mean in JavaScript?", options: ["Equal value", "Equal value and type", "Assignment", "Not equal"], answer: 1 },
+      { question: "Which of the following is a loop in C?", options: ["repeat...until", "for", "each", "iterate"], answer: 1 },
+      { question: "What is the output of console.log(typeof NaN) in JavaScript?", options: ["NaN", "undefined", "number", "object"], answer: 2 },
+      { question: "Which data structure uses LIFO?", options: ["Queue", "Array", "Stack", "Linked List"], answer: 2 },
+      { question: "In Java, which keyword is used to inherit a class?", options: ["inherits", "extend", "extends", "implements"], answer: 2 },
+      { question: "What is the size of an int in C on a 32-bit system?", options: ["2 bytes", "4 bytes", "8 bytes", "Depends on compiler"], answer: 1 },
+      { question: "Which of these is not a primitive data type in Java?", options: ["int", "boolean", "float", "String"], answer: 3 },
+      { question: "Which HTML tag is used to embed JavaScript?", options: ["<js>", "<script>", "<javascript>", "<code>"], answer: 1 },
+      { question: "Which keyword is used to stop a loop in most languages?", options: ["return", "exit", "stop", "break"], answer: 3 },
+      { question: "In Python, which of these is used for comments?", options: ["//", "/** */", "#", "<!-- -->"], answer: 2 },
+      { question: "What is recursion?", options: ["A loop", "A function calling itself", "An infinite loop", "A type of variable"], answer: 1 },
+      { question: "What is the main use of SQL?", options: ["Designing web pages", "Developing applications", "Managing databases", "Writing APIs"], answer: 2 },
+      { question: "What is the correct file extension for Python files?", options: [".java", ".py", ".ps", ".pt"], answer: 1 },
+      { question: "Which of these is not an OOP concept?", options: ["Encapsulation", "Inheritance", "Polymorphism", "Compilation"], answer: 3 },
+      { question: "Which function is used to print output in C?", options: ["print()", "echo()", "System.out.print()", "printf()"], answer: 3 },
+      { question: "What does null mean in most programming languages?", options: ["0", "Not defined", "No value", "Empty string"], answer: 2 },
+      { question: "Which of these is a valid variable name in Python?", options: ["2name", "name_2", "name-2", "@name"], answer: 1 },
+      { question: "Which language is used for Android development?", options: ["Swift", "Kotlin", "C#", "PHP"], answer: 1 },
+      { question: "What is the result of 5 // 2 in Python?", options: ["2.5", "2", "3", "Error"], answer: 1 },
+      { question: "What is the default return value of a function that does not return anything in Python?", options: ["null", "0", "None", "undefined"], answer: 2 },
+      { question: "What symbol is used to access object properties in JavaScript?", options: ["#", "@", ".", ":"], answer: 2 },
+      { question: "Which command is used to install a package in Python?", options: ["npm install", "python get", "pip install", "pkg install"], answer: 2 },
+      { question: "What is the output of bool(\"\") in Python?", options: ["True", "False", "Error", "None"], answer: 1 }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+    const quiz = document.getElementById("quiz");
+    const nextBtn = document.getElementById("next");
+    const result = document.getElementById("result");
+
+    function loadQuestion() {
+      quiz.innerHTML = "";
+      const q = questions[currentQuestion];
+      const questionEl = document.createElement("h2");
+      questionEl.textContent = `${currentQuestion + 1}. ${q.question}`;
+      quiz.appendChild(questionEl);
+
+      q.options.forEach((option, index) => {
+        const btn = document.createElement("div");
+        btn.className = "option";
+        btn.textContent = option;
+        btn.addEventListener("click", () => selectOption(btn, index));
+        quiz.appendChild(btn);
+      });
+
+      quiz.classList.add("fade-in");
+      nextBtn.style.display = "none";
+    }
+
+    function selectOption(selected, index) {
+      const correct = questions[currentQuestion].answer;
+      const options = document.querySelectorAll(".option");
+
+      options.forEach(opt => {
+        opt.style.pointerEvents = "none";
+        opt.classList.remove("correct", "wrong");
+      });
+
+      if (index === correct) {
+        selected.classList.add("correct");
+        score++;
+      } else {
+        selected.classList.add("wrong");
+        options[correct].classList.add("correct");
+      }
+
+      nextBtn.style.display = "inline-block";
+    }
+
+    nextBtn.addEventListener("click", () => {
+      currentQuestion++;
+      if (currentQuestion < questions.length) {
+        loadQuestion();
+      } else {
+        showResult();
+      }
+    });
+
+    function showResult() {
+      quiz.innerHTML = "";
+      nextBtn.style.display = "none";
+      result.innerHTML = `✅ You scored <strong>${score}</strong> out of <strong>${questions.length}</strong>!`;
+    }
+
+    loadQuestion();
+  </script>
+</body>
+</html>
