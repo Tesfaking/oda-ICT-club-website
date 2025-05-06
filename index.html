@@ -7,6 +7,7 @@
   <style>
     body {
       margin: 0;
+      overflow: hidden;
       background: #0a1a0f;
       display: flex;
       justify-content: center;
@@ -20,7 +21,6 @@
       position: relative;
       width: 100%;
       height: 100%;
-      overflow: hidden;
     }
 
     #center-sphere {
@@ -40,13 +40,13 @@
       color: white;
       font-weight: bold;
       user-select: none;
+      overflow: hidden;
     }
 
     #center-sphere img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 50%;
     }
 
     .orbit {
@@ -81,7 +81,7 @@
 
     #intro-text {
       position: absolute;
-      bottom: 10%;
+      bottom: 20%;
       left: 0;
       right: 0;
       text-align: center;
@@ -89,53 +89,18 @@
       opacity: 0;
       transition: opacity 1s;
       font-size: 1.8rem;
-      padding: 0 10px;
       text-shadow: 0 0 10px rgba(46, 204, 113, 0.7);
     }
 
     .tech-icon {
       font-size: 16px;
     }
-
-    @media (max-width: 768px) {
-      #center-sphere {
-        width: 80px;
-        height: 80px;
-      }
-
-      .satellite {
-        width: 28px;
-        height: 28px;
-        font-size: 0.7rem;
-      }
-
-      #intro-text {
-        font-size: 1.4rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      #center-sphere {
-        width: 60px;
-        height: 60px;
-      }
-
-      .satellite {
-        width: 24px;
-        height: 24px;
-        font-size: 0.6rem;
-      }
-
-      #intro-text {
-        font-size: 1.1rem;
-      }
-    }
   </style>
 </head>
 <body>
   <div id="animation-container">
     <div id="center-sphere" title="Loading...">
-      <img src="IMG_20250108_053216_091.jpg" alt="ICT Logo" onerror="this.style.background='radial-gradient(circle at 30% 30%, #2ecc71, #27ae60)'; this.remove();">
+      <img src="IMG_20250108_053216_091.jpg" alt="ICT Logo" onerror="this.onerror=null; this.style.background='radial-gradient(circle at 30% 30%, #2ecc71, #27ae60)'; this.innerHTML='ICT'">
     </div>
     <div id="intro-text">Connecting Technology & Innovation</div>
   </div>
@@ -143,7 +108,9 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const container = document.getElementById('animation-container');
+      const centerSphere = document.getElementById('center-sphere');
       const introText = document.getElementById('intro-text');
+
       const targetUrl = "https://tesfaking.github.io/oda-ICT-club-website/index1.html";
 
       const satellites = [];
@@ -163,7 +130,6 @@
         satellite.style.background = `linear-gradient(135deg, ${colors[i]}, ${colors[(i + 1) % colors.length]})`;
         satellite.innerHTML = `<div class="tech-icon">${icons[i]}</div>`;
         container.appendChild(satellite);
-
         satellites.push({
           element: satellite,
           radius: radius,
